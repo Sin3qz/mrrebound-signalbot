@@ -1,7 +1,7 @@
 {
   "strategy": "reverse-GTAA (Mean-Reversion-Sleeve)",
   "key": "reversegtaa",
-  "updated": "2026-09-27T12:34:50.451490+02:00",
+  "updated": "2026-09-28T13:43:13.422116+02:00",
   "rebalance": "monthly_last",
   "rebalanceLabel": "letzter Handelstag des Monats",
   "ntfyMode": "monthly",
