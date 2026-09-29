@@ -1,0 +1,764 @@
+{
+  "strategy": "MR-Rebound-GTAA (Mean-Reversion, monatlich)",
+  "name": "MR-Rebound-GTAA",
+  "key": "mrreboundgtaa",
+  "updated": "2026-09-29T22:38:14.767048+02:00",
+  "rebalance": "monthly",
+  "rebalanceLabel": "Signal Monatsletzter → Handel 1. Handelstag",
+  "asOf": "2026-09-28",
+  "needsRetry": false,
+  "dataWarnings": [],
+  "decisionDate": "2026-08-31",
+  "tradeDate": "2026-09-01",
+  "nextDecision": "2026-09-30",
+  "nextRebalance": "2026-10-01",
+  "changedToday": false,
+  "changeType": null,
+  "monthlyNotifyToday": false,
+  "late": false,
+  "pendingDecision": null,
+  "pendingTrade": null,
+  "cooldown": 0,
+  "weightDecimals": 1,
+  "baskets": [
+    "A: Nasdaq · EM · TLT",
+    "B: Nasdaq · India · TLT"
+  ],
+  "allocation": [
+    {
+      "asset": "INDIA",
+      "display": "India",
+      "weight": 0.0833,
+      "leverage": 3,
+      "product": "Leverage Shares 3x Long India (INDA)",
+      "isin": "XS2595675302"
+    },
+    {
+      "asset": "NASDAQ100",
+      "display": "Nasdaq 100",
+      "weight": 0.0757,
+      "leverage": 3,
+      "product": "WisdomTree NASDAQ 100 3x Daily Leveraged",
+      "isin": "IE00BLRPRL42"
+    },
+    {
+      "asset": "EM",
+      "display": "Emerging Markets",
+      "weight": 0.0707,
+      "leverage": 3,
+      "product": "WisdomTree Emerging Markets 3x Daily Leveraged",
+      "isin": "IE00BYTYHN28"
+    }
+  ],
+  "signals": {
+    "NASDAQ100": {
+      "display": "Nasdaq 100",
+      "leverage": 3,
+      "rankValue": 0.074409,
+      "rebound": 0.063609,
+      "gates": 3,
+      "target": 0.0757
+    },
+    "EM": {
+      "display": "Emerging Markets",
+      "leverage": 3,
+      "rankValue": 0.068926,
+      "rebound": 0.056148,
+      "gates": 3,
+      "target": 0.0707
+    },
+    "INDIA": {
+      "display": "India",
+      "leverage": 3,
+      "rankValue": -0.028589,
+      "rebound": -0.038038,
+      "gates": 0,
+      "target": 0.0833
+    },
+    "TLT_LONG": {
+      "display": "US-Treasury 20y+",
+      "leverage": 5,
+      "rankValue": -0.014527,
+      "rebound": -0.05607,
+      "gates": 0,
+      "target": 0.0
+    }
+  },
+  "table": {
+    "head": [
+      "Baustein",
+      "Ø Rang",
+      "Rebound",
+      "Gate",
+      "Ziel"
+    ],
+    "note": "Ø Rang = Mittel SMA_S/SMA_L − 1 über S=75–125, L=175–250 (tiefster = Flop) · Rebound = Ø Rendite über 42/50/56 Handelstage · Gate = Kurs > SMA100/200/250 (erfüllt/3) · Ziel = Zielquote (TLT 5x, Rest 3x)",
+    "rows": [
+      [
+        "3x India",
+        -0.028589,
+        -0.038038,
+        "0/3",
+        0.0833
+      ],
+      [
+        "5x TLT",
+        -0.014527,
+        -0.05607,
+        "0/3",
+        0.0
+      ],
+      [
+        "3x EM",
+        0.068926,
+        0.056148,
+        "3/3",
+        0.0707
+      ],
+      [
+        "3x Nasdaq",
+        0.074409,
+        0.063609,
+        "3/3",
+        0.0757
+      ]
+    ],
+    "kinds": [
+      "text",
+      "spct",
+      "spct",
+      "text",
+      "pct1"
+    ]
+  },
+  "timeline": {
+    "span": "letzte 120 Monatsentscheidungen",
+    "what": "welches gehaltene Asset auf Platz 3 von 3 lag (schwächster SMA-Rang = Flop)",
+    "items": [
+      {
+        "date": "2016-09-30",
+        "lead": "NASDAQ100",
+        "allocation": "EM:0.0371|INDIA:0.0572|NASDAQ100:0.5064"
+      },
+      {
+        "date": "2016-10-31",
+        "lead": "NASDAQ100",
+        "allocation": "NASDAQ100:0.2059"
+      },
+      {
+        "date": "2016-11-30",
+        "lead": "NASDAQ100",
+        "allocation": "NASDAQ100:0.3356"
+      },
+      {
+        "date": "2016-12-30",
+        "lead": "NASDAQ100",
+        "allocation": "NASDAQ100:0.198"
+      },
+      {
+        "date": "2017-01-31",
+        "lead": "INDIA",
+        "allocation": "EM:0.3289|INDIA:0.3333|NASDAQ100:0.0045"
+      },
+      {
+        "date": "2017-02-28",
+        "lead": "INDIA",
+        "allocation": "EM:0.3333|INDIA:0.3333"
+      },
+      {
+        "date": "2017-03-31",
+        "lead": "TLT_LONG",
+        "allocation": "EM:0.3333|INDIA:0.3333|TLT_LONG:0.0741"
+      },
+      {
+        "date": "2017-04-28",
+        "lead": "TLT_LONG",
+        "allocation": "EM:0.3333|INDIA:0.3333|TLT_LONG:0.1111"
+      },
+      {
+        "date": "2017-05-31",
+        "lead": "TLT_LONG",
+        "allocation": "EM:0.3333|INDIA:0.3333|TLT_LONG:0.2222"
+      },
+      {
+        "date": "2017-06-30",
+        "lead": "TLT_LONG",
+        "allocation": "EM:0.3333|INDIA:0.3333|TLT_LONG:0.2222"
+      },
+      {
+        "date": "2017-07-31",
+        "lead": "TLT_LONG",
+        "allocation": "EM:0.254|INDIA:0.3077|NASDAQ100:0.105|TLT_LONG:0.2222"
+      },
+      {
+        "date": "2017-08-31",
+        "lead": "TLT_LONG",
+        "allocation": "EM:0.0357|INDIA:0.252|NASDAQ100:0.379|TLT_LONG:0.3333"
+      },
+      {
+        "date": "2017-09-29",
+        "lead": "TLT_LONG",
+        "allocation": "NASDAQ100:0.4235|TLT_LONG:0.2627"
+      },
+      {
+        "date": "2017-10-31",
+        "lead": "INDIA",
+        "allocation": "INDIA:0.3306|NASDAQ100:0.3361"
+      },
+      {
+        "date": "2017-11-30",
+        "lead": "TLT_LONG",
+        "allocation": "INDIA:0.3333|NASDAQ100:0.3333|TLT_LONG:0.1111"
+      },
+      {
+        "date": "2017-12-29",
+        "lead": "TLT_LONG",
+        "allocation": "INDIA:0.3333|NASDAQ100:0.3333|TLT_LONG:0.3333"
+      },
+      {
+        "date": "2018-01-31",
+        "lead": "INDIA",
+        "allocation": "INDIA:0.3333|NASDAQ100:0.3329"
+      },
+      {
+        "date": "2018-02-28",
+        "lead": "INDIA",
+        "allocation": "EM:0.1217|INDIA:0.3333|NASDAQ100:0.2116"
+      },
+      {
+        "date": "2018-03-29",
+        "lead": "CASH",
+        "allocation": "CASH"
+      },
+      {
+        "date": "2018-04-30",
+        "lead": "INDIA",
+        "allocation": "INDIA:0.3333"
+      },
+      {
+        "date": "2018-05-31",
+        "lead": "TLT_LONG",
+        "allocation": "INDIA:0.3333|TLT_LONG:0.0926"
+      },
+      {
+        "date": "2018-06-29",
+        "lead": "TLT_LONG",
+        "allocation": "INDIA:0.3333|TLT_LONG:0.4167"
+      },
+      {
+        "date": "2018-07-31",
+        "lead": "TLT_LONG",
+        "allocation": "INDIA:0.3333|TLT_LONG:0.1008"
+      },
+      {
+        "date": "2018-08-31",
+        "lead": "TLT_LONG",
+        "allocation": "INDIA:0.3333|TLT_LONG:0.3333"
+      },
+      {
+        "date": "2018-09-28",
+        "lead": "NASDAQ100",
+        "allocation": "NASDAQ100:0.003"
+      },
+      {
+        "date": "2018-10-31",
+        "lead": "CASH",
+        "allocation": "CASH"
+      },
+      {
+        "date": "2018-11-30",
+        "lead": "CASH",
+        "allocation": "CASH"
+      },
+      {
+        "date": "2018-12-31",
+        "lead": "TLT_LONG",
+        "allocation": "TLT_LONG:0.581"
+      },
+      {
+        "date": "2019-01-31",
+        "lead": "EM",
+        "allocation": "EM:0.1556|INDIA:0.1078|TLT_LONG:0.2786"
+      },
+      {
+        "date": "2019-02-28",
+        "lead": "EM",
+        "allocation": "EM:0.1517|INDIA:0.1342|NASDAQ100:0.4912|TLT_LONG:0.0315"
+      },
+      {
+        "date": "2019-03-29",
+        "lead": "NASDAQ100",
+        "allocation": "EM:0.3107|INDIA:0.3333|NASDAQ100:0.356"
+      },
+      {
+        "date": "2019-04-30",
+        "lead": "NASDAQ100",
+        "allocation": "EM:0.3177|INDIA:0.3333|NASDAQ100:0.3333|TLT_LONG:0.0157"
+      },
+      {
+        "date": "2019-05-31",
+        "lead": "INDIA",
+        "allocation": "INDIA:0.3174|TLT_LONG:0.0368"
+      },
+      {
+        "date": "2019-06-28",
+        "lead": "NASDAQ100",
+        "allocation": "INDIA:0.3016|NASDAQ100:0.1272|TLT_LONG:0.1305"
+      },
+      {
+        "date": "2019-07-31",
+        "lead": "EM",
+        "allocation": "EM:0.1111|INDIA:0.038|NASDAQ100:0.2582|TLT_LONG:0.4058"
+      },
+      {
+        "date": "2019-08-30",
+        "lead": "NASDAQ100",
+        "allocation": "NASDAQ100:0.1542|TLT_LONG:0.204"
+      },
+      {
+        "date": "2019-09-30",
+        "lead": "INDIA",
+        "allocation": "INDIA:0.1654|TLT_LONG:0.0157"
+      },
+      {
+        "date": "2019-10-31",
+        "lead": "EM",
+        "allocation": "EM:0.1667|INDIA:0.1667|NASDAQ100:0.6667"
+      },
+      {
+        "date": "2019-11-29",
+        "lead": "EM",
+        "allocation": "EM:0.1667|INDIA:0.1667|NASDAQ100:0.6667"
+      },
+      {
+        "date": "2019-12-31",
+        "lead": "EM",
+        "allocation": "EM:0.1701|INDIA:0.1701|NASDAQ100:0.6393"
+      },
+      {
+        "date": "2020-01-31",
+        "lead": "EM",
+        "allocation": "EM:0.0452|INDIA:0.1341|NASDAQ100:0.1734|TLT_LONG:0.4422"
+      },
+      {
+        "date": "2020-02-28",
+        "lead": "TLT_LONG",
+        "allocation": "TLT_LONG:0.5645"
+      },
+      {
+        "date": "2020-03-31",
+        "lead": "TLT_LONG",
+        "allocation": "TLT_LONG:0.658"
+      },
+      {
+        "date": "2020-04-30",
+        "lead": "NASDAQ100",
+        "allocation": "NASDAQ100:0.1193|TLT_LONG:0.3087"
+      },
+      {
+        "date": "2020-05-29",
+        "lead": "NASDAQ100",
+        "allocation": "NASDAQ100:0.6275|TLT_LONG:0.0261"
+      },
+      {
+        "date": "2020-06-30",
+        "lead": "INDIA",
+        "allocation": "EM:0.0556|INDIA:0.0556|NASDAQ100:0.6667"
+      },
+      {
+        "date": "2020-07-31",
+        "lead": "INDIA",
+        "allocation": "EM:0.1667|INDIA:0.1667|NASDAQ100:0.5843|TLT_LONG:0.0824"
+      },
+      {
+        "date": "2020-08-31",
+        "lead": "INDIA",
+        "allocation": "EM:0.2103|INDIA:0.2103|NASDAQ100:0.2179|TLT_LONG:0.0997"
+      },
+      {
+        "date": "2020-09-30",
+        "lead": "INDIA",
+        "allocation": "EM:0.2695|INDIA:0.2545"
+      },
+      {
+        "date": "2020-10-30",
+        "lead": "INDIA",
+        "allocation": "EM:0.2168|INDIA:0.2989"
+      },
+      {
+        "date": "2020-11-30",
+        "lead": "INDIA",
+        "allocation": "EM:0.3333|INDIA:0.3333"
+      },
+      {
+        "date": "2020-12-31",
+        "lead": "EM",
+        "allocation": "EM:0.3249|INDIA:0.2153|NASDAQ100:0.1264"
+      },
+      {
+        "date": "2021-01-29",
+        "lead": "EM",
+        "allocation": "EM:0.1751|INDIA:0.0601|NASDAQ100:0.4315"
+      },
+      {
+        "date": "2021-02-26",
+        "lead": "NASDAQ100",
+        "allocation": "EM:0.0025|NASDAQ100:0.6642"
+      },
+      {
+        "date": "2021-03-31",
+        "lead": "NASDAQ100",
+        "allocation": "NASDAQ100:0.4444"
+      },
+      {
+        "date": "2021-04-30",
+        "lead": "NASDAQ100",
+        "allocation": "NASDAQ100:0.6667"
+      },
+      {
+        "date": "2021-05-28",
+        "lead": "NASDAQ100",
+        "allocation": "NASDAQ100:0.6667"
+      },
+      {
+        "date": "2021-06-30",
+        "lead": "TLT_LONG",
+        "allocation": "EM:0.1162|INDIA:0.0043|NASDAQ100:0.5462|TLT_LONG:0.1111"
+      },
+      {
+        "date": "2021-07-30",
+        "lead": "TLT_LONG",
+        "allocation": "INDIA:0.1708|NASDAQ100:0.1625|TLT_LONG:0.2778"
+      },
+      {
+        "date": "2021-08-31",
+        "lead": "TLT_LONG",
+        "allocation": "INDIA:0.3118|NASDAQ100:0.0215|TLT_LONG:0.4223"
+      },
+      {
+        "date": "2021-09-30",
+        "lead": "INDIA",
+        "allocation": "INDIA:0.2929"
+      },
+      {
+        "date": "2021-10-29",
+        "lead": "TLT_LONG",
+        "allocation": "NASDAQ100:0.3333|TLT_LONG:0.1662"
+      },
+      {
+        "date": "2021-11-30",
+        "lead": "TLT_LONG",
+        "allocation": "NASDAQ100:0.3333|TLT_LONG:0.5"
+      },
+      {
+        "date": "2021-12-31",
+        "lead": "TLT_LONG",
+        "allocation": "NASDAQ100:0.33|TLT_LONG:0.5008"
+      },
+      {
+        "date": "2022-01-31",
+        "lead": "CASH",
+        "allocation": "CASH"
+      },
+      {
+        "date": "2022-02-28",
+        "lead": "CASH",
+        "allocation": "CASH"
+      },
+      {
+        "date": "2022-03-31",
+        "lead": "CASH",
+        "allocation": "CASH"
+      },
+      {
+        "date": "2022-04-29",
+        "lead": "CASH",
+        "allocation": "CASH"
+      },
+      {
+        "date": "2022-05-31",
+        "lead": "CASH",
+        "allocation": "CASH"
+      },
+      {
+        "date": "2022-06-30",
+        "lead": "CASH",
+        "allocation": "CASH"
+      },
+      {
+        "date": "2022-07-29",
+        "lead": "NASDAQ100",
+        "allocation": "NASDAQ100:0.1905"
+      },
+      {
+        "date": "2022-08-31",
+        "lead": "CASH",
+        "allocation": "CASH"
+      },
+      {
+        "date": "2022-09-30",
+        "lead": "CASH",
+        "allocation": "CASH"
+      },
+      {
+        "date": "2022-10-31",
+        "lead": "CASH",
+        "allocation": "CASH"
+      },
+      {
+        "date": "2022-11-30",
+        "lead": "EM",
+        "allocation": "EM:0.0676|NASDAQ100:0.0796"
+      },
+      {
+        "date": "2022-12-30",
+        "lead": "EM",
+        "allocation": "EM:0.0716"
+      },
+      {
+        "date": "2023-01-31",
+        "lead": "TLT_LONG",
+        "allocation": "EM:0.0193|NASDAQ100:0.4316|TLT_LONG:0.1111"
+      },
+      {
+        "date": "2023-02-28",
+        "lead": "NASDAQ100",
+        "allocation": "NASDAQ100:0.4444"
+      },
+      {
+        "date": "2023-03-31",
+        "lead": "TLT_LONG",
+        "allocation": "NASDAQ100:0.6626|TLT_LONG:0.0756"
+      },
+      {
+        "date": "2023-04-28",
+        "lead": "TLT_LONG",
+        "allocation": "EM:0.0016|INDIA:0.0694|NASDAQ100:0.5289|TLT_LONG:0.3676"
+      },
+      {
+        "date": "2023-05-31",
+        "lead": "INDIA",
+        "allocation": "INDIA:0.2861|NASDAQ100:0.1169"
+      },
+      {
+        "date": "2023-06-30",
+        "lead": "INDIA",
+        "allocation": "EM:0.3303|INDIA:0.2735|TLT_LONG:0.0496"
+      },
+      {
+        "date": "2023-07-31",
+        "lead": "INDIA",
+        "allocation": "EM:0.3333|INDIA:0.317"
+      },
+      {
+        "date": "2023-08-31",
+        "lead": "INDIA",
+        "allocation": "INDIA:0.3333"
+      },
+      {
+        "date": "2023-09-29",
+        "lead": "CASH",
+        "allocation": "CASH"
+      },
+      {
+        "date": "2023-10-31",
+        "lead": "CASH",
+        "allocation": "CASH"
+      },
+      {
+        "date": "2023-11-30",
+        "lead": "TLT_LONG",
+        "allocation": "EM:0.3333|INDIA:0.1111|TLT_LONG:0.037"
+      },
+      {
+        "date": "2023-12-29",
+        "lead": "TLT_LONG",
+        "allocation": "EM:0.3333|INDIA:0.3333|TLT_LONG:0.3333"
+      },
+      {
+        "date": "2024-01-31",
+        "lead": "TLT_LONG",
+        "allocation": "EM:0.0741|INDIA:0.3299|NASDAQ100:0.0034|TLT_LONG:0.3981"
+      },
+      {
+        "date": "2024-02-29",
+        "lead": "EM",
+        "allocation": "EM:0.2221|INDIA:0.3333"
+      },
+      {
+        "date": "2024-03-28",
+        "lead": "TLT_LONG",
+        "allocation": "EM:0.3149|INDIA:0.2222|TLT_LONG:0.2647"
+      },
+      {
+        "date": "2024-04-30",
+        "lead": "EM",
+        "allocation": "EM:0.3261|INDIA:0.3333"
+      },
+      {
+        "date": "2024-05-31",
+        "lead": "EM",
+        "allocation": "EM:0.333|INDIA:0.2222"
+      },
+      {
+        "date": "2024-06-28",
+        "lead": "TLT_LONG",
+        "allocation": "EM:0.3333|INDIA:0.3333|TLT_LONG:0.3333"
+      },
+      {
+        "date": "2024-07-31",
+        "lead": "TLT_LONG",
+        "allocation": "EM:0.2222|INDIA:0.3333|TLT_LONG:0.3611"
+      },
+      {
+        "date": "2024-08-30",
+        "lead": "TLT_LONG",
+        "allocation": "EM:0.3333|INDIA:0.3333|TLT_LONG:0.3333"
+      },
+      {
+        "date": "2024-09-30",
+        "lead": "TLT_LONG",
+        "allocation": "EM:0.3233|INDIA:0.2305|NASDAQ100:0.0753|TLT_LONG:0.3427"
+      },
+      {
+        "date": "2024-10-31",
+        "lead": "EM",
+        "allocation": "EM:0.3203|INDIA:0.0233|NASDAQ100:0.2422"
+      },
+      {
+        "date": "2024-11-29",
+        "lead": "EM",
+        "allocation": "EM:0.0718|NASDAQ100:0.2107"
+      },
+      {
+        "date": "2024-12-31",
+        "lead": "NASDAQ100",
+        "allocation": "NASDAQ100:0.008"
+      },
+      {
+        "date": "2025-01-31",
+        "lead": "EM",
+        "allocation": "EM:0.1479"
+      },
+      {
+        "date": "2025-02-28",
+        "lead": "TLT_LONG",
+        "allocation": "EM:0.1481|TLT_LONG:0.3148"
+      },
+      {
+        "date": "2025-03-31",
+        "lead": "TLT_LONG",
+        "allocation": "EM:0.3333|INDIA:0.0712|TLT_LONG:0.265"
+      },
+      {
+        "date": "2025-04-30",
+        "lead": "INDIA",
+        "allocation": "EM:0.2171|INDIA:0.2791|TLT_LONG:0.1033"
+      },
+      {
+        "date": "2025-05-30",
+        "lead": "INDIA",
+        "allocation": "EM:0.1494|INDIA:0.2907|NASDAQ100:0.1918"
+      },
+      {
+        "date": "2025-06-30",
+        "lead": "TLT_LONG",
+        "allocation": "EM:0.007|INDIA:0.2368|NASDAQ100:0.3926|TLT_LONG:0.0868"
+      },
+      {
+        "date": "2025-07-31",
+        "lead": "TLT_LONG",
+        "allocation": "INDIA:0.0441|NASDAQ100:0.4946|TLT_LONG:0.1383"
+      },
+      {
+        "date": "2025-08-29",
+        "lead": "TLT_LONG",
+        "allocation": "NASDAQ100:0.459|TLT_LONG:0.0868"
+      },
+      {
+        "date": "2025-09-30",
+        "lead": "TLT_LONG",
+        "allocation": "EM:0.0013|NASDAQ100:0.3387|TLT_LONG:0.415"
+      },
+      {
+        "date": "2025-10-31",
+        "lead": "TLT_LONG",
+        "allocation": "EM:0.0904|INDIA:0.3333|NASDAQ100:0.2429|TLT_LONG:0.3333"
+      },
+      {
+        "date": "2025-11-28",
+        "lead": "TLT_LONG",
+        "allocation": "EM:0.1498|INDIA:0.3224|NASDAQ100:0.1835|TLT_LONG:0.3443"
+      },
+      {
+        "date": "2025-12-31",
+        "lead": "INDIA",
+        "allocation": "EM:0.1659|INDIA:0.2032|NASDAQ100:0.1116"
+      },
+      {
+        "date": "2026-01-30",
+        "lead": "NASDAQ100",
+        "allocation": "NASDAQ100:0.3333"
+      },
+      {
+        "date": "2026-02-27",
+        "lead": "TLT_LONG",
+        "allocation": "TLT_LONG:0.5541"
+      },
+      {
+        "date": "2026-03-31",
+        "lead": "CASH",
+        "allocation": "CASH"
+      },
+      {
+        "date": "2026-04-30",
+        "lead": "NASDAQ100",
+        "allocation": "NASDAQ100:0.3333"
+      },
+      {
+        "date": "2026-05-29",
+        "lead": "NASDAQ100",
+        "allocation": "NASDAQ100:0.3333"
+      },
+      {
+        "date": "2026-06-30",
+        "lead": "TLT_LONG",
+        "allocation": "NASDAQ100:0.3333|TLT_LONG:0.3333"
+      },
+      {
+        "date": "2026-07-31",
+        "lead": "INDIA",
+        "allocation": "INDIA:0.0833"
+      },
+      {
+        "date": "2026-08-31",
+        "lead": "INDIA",
+        "allocation": "EM:0.0707|INDIA:0.0833|NASDAQ100:0.0757"
+      }
+    ]
+  },
+  "freshness": {
+    "^NDX": {
+      "last": "2026-09-28",
+      "fresh": true
+    },
+    "EEM": {
+      "last": "2026-09-28",
+      "fresh": true
+    },
+    "^BSESN": {
+      "last": "2026-09-28",
+      "fresh": true
+    },
+    "TLT": {
+      "last": "2026-09-28",
+      "fresh": true
+    }
+  },
+  "firstDates": {
+    "^NDX": "1985-10-01",
+    "EEM": "2003-04-14",
+    "^BSESN": "1997-07-01",
+    "TLT": "2002-07-30"
+  }
+}

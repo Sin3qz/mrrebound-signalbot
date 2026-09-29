@@ -1,0 +1,3 @@
+{
+  "content": "📊 MR-Rebound-GTAA (Mean-Reversion, monatlich) — Tagesstatus\nZiel seit 01.09.2026 (Signal 31.08.):\n•  8.3%  3x India\n•  7.6%  3x Nasdaq 100\n•  7.1%  3x Emerging Markets\n• 77.0%  Cash\nNächstes Signal: Schluss 30.09. → Handel 01.10.2026\n\nSignale (1x-Kurse, Stand 28.09.):\n```\nAsset  Rang Rebnd Gate Ziel\nIndia   -3%   -4%  0/3 8.3%\nTLT     -1%   -6%  0/3    –\nEM      +7%   +6%  3/3 7.1%\nNasdaq  +7%   +6%  3/3 7.6%\n```\nRang = Ø SMA75–125/SMA175–250 (tiefster = Flop)\nRebnd = Ø 42/50/56-Tage-Rendite\nGate = Kurs > SMA100/200/250\nZiel = Quote (Nasdaq/EM/India 3x, TLT 5x)\n\nHebel-ETPs: Pfad-/Emittentenrisiko. KEINE ANLAGEBERATUNG."
+}
