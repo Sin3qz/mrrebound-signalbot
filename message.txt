@@ -6,13 +6,13 @@ Ziel seit 01.09.2026 (Signal 31.08.):
 • 77.0%  Cash
 Nächstes Signal: Schluss 30.09. → Handel 01.10.2026
 
-Signale (1x-Kurse, Stand 28.09.):
+Signale (1x-Kurse, Stand 29.09.):
 ```
 Asset  Rang Rebnd Gate Ziel
-India   -3%   -4%  0/3 8.3%
+India   -3%   -6%  0/3 8.3%
 TLT     -1%   -6%  0/3    –
-EM      +7%   +6%  3/3 7.1%
-Nasdaq  +7%   +6%  3/3 7.6%
+EM      +7%   +4%  3/3 7.1%
+Nasdaq  +7%   +5%  3/3 7.6%
 ```
 Rang = Ø SMA75–125/SMA175–250 (tiefster = Flop)
 Rebnd = Ø 42/50/56-Tage-Rendite
