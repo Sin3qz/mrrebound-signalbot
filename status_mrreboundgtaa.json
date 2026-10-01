@@ -2,19 +2,19 @@
   "strategy": "MR-Rebound-GTAA (Mean-Reversion, monatlich)",
   "name": "MR-Rebound-GTAA",
   "key": "mrreboundgtaa",
-  "updated": "2026-09-30T13:10:19.973126+02:00",
+  "updated": "2026-10-01T08:04:46.866141+02:00",
   "rebalance": "monthly",
   "rebalanceLabel": "Signal Monatsletzter → Handel 1. Handelstag",
-  "asOf": "2026-09-29",
+  "asOf": "2026-09-30",
   "needsRetry": false,
   "dataWarnings": [],
-  "decisionDate": "2026-08-31",
-  "tradeDate": "2026-09-01",
-  "nextDecision": "2026-09-30",
-  "nextRebalance": "2026-10-01",
-  "changedToday": false,
-  "changeType": null,
-  "monthlyNotifyToday": false,
+  "decisionDate": "2026-09-30",
+  "tradeDate": "2026-10-01",
+  "nextDecision": "2026-10-30",
+  "nextRebalance": "2026-11-02",
+  "changedToday": true,
+  "changeType": "SWITCH",
+  "monthlyNotifyToday": true,
   "late": false,
   "pendingDecision": null,
   "pendingTrade": null,
@@ -26,60 +26,52 @@
   ],
   "allocation": [
     {
-      "asset": "INDIA",
-      "display": "India",
-      "weight": 0.0833,
+      "asset": "EM",
+      "display": "Emerging Markets",
+      "weight": 0.2605,
       "leverage": 3,
-      "product": "Leverage Shares 3x Long India (INDA)",
-      "isin": "XS2595675302"
+      "product": "WisdomTree Emerging Markets 3x Daily Leveraged",
+      "isin": "IE00BYTYHN28"
     },
     {
       "asset": "NASDAQ100",
       "display": "Nasdaq 100",
-      "weight": 0.0757,
+      "weight": 0.0728,
       "leverage": 3,
       "product": "WisdomTree NASDAQ 100 3x Daily Leveraged",
       "isin": "IE00BLRPRL42"
-    },
-    {
-      "asset": "EM",
-      "display": "Emerging Markets",
-      "weight": 0.0707,
-      "leverage": 3,
-      "product": "WisdomTree Emerging Markets 3x Daily Leveraged",
-      "isin": "IE00BYTYHN28"
     }
   ],
   "signals": {
     "NASDAQ100": {
       "display": "Nasdaq 100",
       "leverage": 3,
-      "rankValue": 0.074305,
-      "rebound": 0.052449,
+      "rankValue": 0.074176,
+      "rebound": 0.052527,
       "gates": 3,
-      "target": 0.0757
+      "target": 0.0728
     },
     "EM": {
       "display": "Emerging Markets",
       "leverage": 3,
-      "rankValue": 0.068316,
-      "rebound": 0.042601,
+      "rankValue": 0.06763,
+      "rebound": 0.033275,
       "gates": 3,
-      "target": 0.0707
+      "target": 0.2605
     },
     "INDIA": {
       "display": "India",
       "leverage": 3,
-      "rankValue": -0.028321,
-      "rebound": -0.06115,
+      "rankValue": -0.028067,
+      "rebound": -0.066971,
       "gates": 0,
-      "target": 0.0833
+      "target": 0.0
     },
     "TLT_LONG": {
       "display": "US-Treasury 20y+",
       "leverage": 5,
-      "rankValue": -0.014831,
-      "rebound": -0.058152,
+      "rankValue": -0.015167,
+      "rebound": -0.058761,
       "gates": 0,
       "target": 0.0
     }
@@ -96,31 +88,31 @@
     "rows": [
       [
         "3x India",
-        -0.028321,
-        -0.06115,
+        -0.028067,
+        -0.066971,
         "0/3",
-        0.0833
+        0.0
       ],
       [
         "5x TLT",
-        -0.014831,
-        -0.058152,
+        -0.015167,
+        -0.058761,
         "0/3",
         0.0
       ],
       [
         "3x EM",
-        0.068316,
-        0.042601,
+        0.06763,
+        0.033275,
         "3/3",
-        0.0707
+        0.2605
       ],
       [
         "3x Nasdaq",
-        0.074305,
-        0.052449,
+        0.074176,
+        0.052527,
         "3/3",
-        0.0757
+        0.0728
       ]
     ],
     "kinds": [
@@ -135,11 +127,6 @@
     "span": "letzte 120 Monatsentscheidungen",
     "what": "welches gehaltene Asset auf Platz 3 von 3 lag (schwächster SMA-Rang = Flop)",
     "items": [
-      {
-        "date": "2016-09-30",
-        "lead": "NASDAQ100",
-        "allocation": "EM:0.0371|INDIA:0.0572|NASDAQ100:0.5064"
-      },
       {
         "date": "2016-10-31",
         "lead": "NASDAQ100",
@@ -734,24 +721,29 @@
         "date": "2026-08-31",
         "lead": "INDIA",
         "allocation": "EM:0.0707|INDIA:0.0833|NASDAQ100:0.0757"
+      },
+      {
+        "date": "2026-09-30",
+        "lead": "EM",
+        "allocation": "EM:0.2605|NASDAQ100:0.0728"
       }
     ]
   },
   "freshness": {
     "^NDX": {
-      "last": "2026-09-29",
+      "last": "2026-09-30",
       "fresh": true
     },
     "EEM": {
-      "last": "2026-09-29",
+      "last": "2026-09-30",
       "fresh": true
     },
     "^BSESN": {
-      "last": "2026-09-29",
+      "last": "2026-09-30",
       "fresh": true
     },
     "TLT": {
-      "last": "2026-09-29",
+      "last": "2026-09-30",
       "fresh": true
     }
   },
